@@ -1,0 +1,17 @@
+{
+  "name": "antv-infographic-renderer",
+  "version": "1.0.0",
+  "description": "Renderer for AntV Infographic in Quarto",
+  "type": "module",
+  "main": "render-infographic.js",
+  "scripts": {
+    "test": "node render-infographic.js --content \"infographic list-row-simple-horizontal-arrow\ndata\n  title Test\n  lists\n    - label Item 1\n    - label Item 2\" --format svg --out test-output.svg"
+  },
+  "dependencies": {
+    "@antv/infographic": "^0.2.20",
+    "puppeteer": "^22.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

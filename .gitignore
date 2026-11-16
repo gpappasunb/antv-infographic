@@ -1,0 +1,16 @@
+.antv-cache/
+node_modules/
+
+# Rendered samples and the installation archive are build products
+example.html
+example-revealjs.html
+example.pdf
+example.docx
+example_files/
+antv-infographic.zip
+
+# Leftovers of the first prototype
+_extensions/antv-infographic/test.qmd
+_extensions/antv-infographic/test.html
+_extensions/antv-infographic/test_files/
+_extensions/antv-infographic/scripts/test-module.html

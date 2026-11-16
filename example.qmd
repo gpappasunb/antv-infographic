@@ -1,0 +1,151 @@
+---
+title: "AntV Infographic for Quarto"
+subtitle: "One source, four output formats"
+filters:
+  - antv-infographic
+format:
+  html:
+    embed-resources: true
+  revealjs:
+    output-file: example-revealjs.html
+    embed-resources: true
+  pdf: default
+  docx: default
+---
+
+## A captioned, cross-referenced figure
+
+@fig-growth is written as an `infographic` code block. Icons are looked up by
+name.
+
+```{.infographic #fig-growth fig-cap="A customer growth engine." fig-alt="Three arrows: acquire, convert, retain."}
+infographic list-row-horizontal-icon-arrow
+data
+  title Customer Growth Engine
+  desc Multi-channel reach and repeat purchases
+  lists
+    - label Acquire
+      desc Paid channels and content marketing
+      icon megaphone
+    - label Convert
+      desc Lead scoring and automated follow-up
+      icon filter
+    - label Retain
+      desc Loyalty programme and renewals
+      icon heart
+```
+
+## A sequence
+
+```infographic
+infographic sequence-steps-simple
+data
+  title Publishing workflow
+  sequences
+    - label Write
+      desc Markdown and code
+    - label Render
+      desc Quarto and Pandoc
+    - label Review
+      desc Check every format
+    - label Publish
+      desc Share the result
+```
+
+## A comparison
+
+```{.infographic width="90%"}
+infographic compare-swot
+data
+  title SWOT analysis
+  compares
+    - label Strengths
+      children
+        - label Reproducible documents
+        - label One source, many formats
+    - label Weaknesses
+      children
+        - label Needs Node.js and Chrome
+        - label Rendering takes a few seconds
+    - label Opportunities
+      children
+        - label About 270 templates
+        - label Themes and palettes
+    - label Threats
+      children
+        - label Online icon and font services
+        - label Young upstream library
+```
+
+## A chart
+
+```{.infographic width="70%" fig-align="center"}
+infographic chart-pie-donut-plain-text
+data
+  title Output formats
+  desc Share of rendered documents
+  values
+    - label HTML
+      value 45
+    - label Reveal.js
+      value 25
+    - label PDF
+      value 20
+    - label Word
+      value 10
+```
+
+## A hierarchy
+
+```infographic
+infographic hierarchy-tree-curved-line-rounded-rect-node
+data
+  title Extension layout
+  root
+    label antv-infographic
+    children
+      - label Lua filter
+        children
+          - label Collects code blocks
+          - label Inserts images
+      - label Node renderer
+        children
+          - label Headless Chrome
+          - label SVG, PNG, PDF
+```
+
+## The dark theme
+
+```{.infographic theme="dark" width="80%"}
+infographic sequence-timeline-simple
+data
+  title Roadmap
+  sequences
+    - label Q1
+      desc Prototype
+    - label Q2
+      desc Private beta
+    - label Q3
+      desc Public launch
+```
+
+## The hand-drawn theme
+
+```{.infographic theme="hand-drawn" width="80%"}
+infographic list-grid-badge-card
+data
+  title Why infographics
+  lists
+    - label Clear
+      desc One idea per picture
+      icon eye
+    - label Fast
+      desc Read in seconds
+      icon lightning
+    - label Memorable
+      desc Shapes stick better than text
+      icon brain
+    - label Shareable
+      desc Works in slides and reports
+      icon share
+```
